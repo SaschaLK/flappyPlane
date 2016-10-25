@@ -14,13 +14,19 @@ public class Tower {
 	
 //	private Rectangle tower = new Rectangle(towerX, towerY, towerWidth, towerHeight);
 	private Rectangle tower;
+	private Rectangle tower2;
 
     public Tower(){
         tower = new Rectangle(400, 0, 50, 200);
+        tower2 = new Rectangle(400, tower.y-300, 50, 200);
+        
     }
 	
 	public Rectangle getTower(){
 		return tower;
+	}
+	public Rectangle getTower2(){
+		return tower2;
 	}
 	public int getTowerX() {
 		return tower.x;
