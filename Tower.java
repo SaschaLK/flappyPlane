@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 
 public class Tower {
 	
-	private int towerX = 500;
+	private int towerX = 480;
 	private int towerY = 0;
 	private int towerWidth = 50;
 	private int towerHeight = 200;
@@ -14,10 +14,10 @@ public class Tower {
 	
 	private Rectangle tower = new Rectangle(towerX, towerY, towerWidth, towerHeight);
 	
-//	public Tower(){
-//		
-//	}
 	
+	public Rectangle getTower(){
+		return tower;
+	}
 	public int getTowerX() {
 		return towerX;
 	}

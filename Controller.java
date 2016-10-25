@@ -10,6 +10,7 @@ public class Controller {
 		
 		timer = new Timer(10, listener->{
 			view.updateView();
+//			System.out.println("Hello");
 		});
 		timer.start();
 	}
