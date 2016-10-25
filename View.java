@@ -18,6 +18,7 @@ public class View extends JFrame{
 		setVisible(true);
 	}
 	public void updateView(){
+//		panel.move();
 		panel.repaint();
 	}
 

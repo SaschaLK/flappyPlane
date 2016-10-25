@@ -1,7 +1,6 @@
 package flappyPlane;
 
 import java.awt.Graphics;
-import java.awt.Rectangle;
 
 import javax.swing.JPanel;
 
@@ -11,8 +10,7 @@ public class Panel extends JPanel{
 	
 	private int gameXsize = 500;
 	private int gameYsize = 500;
-	private int towerXposition = tower.getTowerX();
-	
+	private int tempX = 500;
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -22,16 +20,11 @@ public class Panel extends JPanel{
 		
 //		towerXposition = towerXposition - tower.getTowerMS();
 //		tower.getTower().setLocation(tower.getTowerX()-tower.getTowerMS(), 0);
-		tower.getTower().setLocation(tower.getTower().x - 1, 0);
+		tower.getTower().setLocation(tower.getTower().x - tower.getTowerMS(), 0);
 		
-//		if(rec.x > 300){
-//			rec.setLocation(-rec.width, -rec.height);
-//			x = -rec.width;
-//			y = -rec.height;
-//		}
-//		else{
-//			rec.setLocation(x, y);
-//		}
+		if(tower.getTower().x < -(tower.getTowerWidth())){
+			tower.getTower().setLocation(gameXsize, 0);
+		}
 	}
 	public int getGameXsize(){
 		return gameXsize;
