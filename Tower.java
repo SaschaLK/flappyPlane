@@ -9,11 +9,15 @@ public class Tower {
 	private int towerY = 0;
 	private int towerWidth = 50;
 	private int towerHeight = 200;
-	private int towerMS = 1;
+	private int towerMS = 100;
 	private Color towerColor = new Color(200, 100, 100);
 	
-	private Rectangle tower = new Rectangle(towerX, towerY, towerWidth, towerHeight);
-	
+//	private Rectangle tower = new Rectangle(towerX, towerY, towerWidth, towerHeight);
+	private Rectangle tower;
+
+    public Tower(){
+        tower = new Rectangle(towerX, towerY, towerWidth, towerHeight);
+    }
 	
 	public Rectangle getTower(){
 		return tower;

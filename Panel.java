@@ -21,8 +21,17 @@ public class Panel extends JPanel{
 		g.fillRect(tower.getTowerX(), tower.getTowerY(), tower.getTowerWidth(), tower.getTowerHeight());
 		
 //		towerXposition = towerXposition - tower.getTowerMS();
-		tower.getTower().setLocation(tower.getTowerX()-tower.getTowerMS(), 0);
+//		tower.getTower().setLocation(tower.getTowerX()-tower.getTowerMS(), 0);
+		tower.getTower().setLocation(tower.getTower().x - 1, 0);
 		
+//		if(rec.x > 300){
+//			rec.setLocation(-rec.width, -rec.height);
+//			x = -rec.width;
+//			y = -rec.height;
+//		}
+//		else{
+//			rec.setLocation(x, y);
+//		}
 	}
 	public int getGameXsize(){
 		return gameXsize;
